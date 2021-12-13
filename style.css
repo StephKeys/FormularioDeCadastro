@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+  font-family: Poppins;
+  font-size: 15px;
+  background-image: linear-gradient(to right, #a0f3ed, #ff89bf);
+  height: 97vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+fieldset {
+  background-color: white;
+  border-radius: 15px;
+  border-color: #ff89bf;
+  width: 80px;
+}
+
+legend {
+  background-color: #ff89bf;
+  border-radius: 6px;
+  padding: 1px;
+}
+
+select {
+  border: none;
+  border-bottom: 1px solid #ff89bf;
+  background-color: pink;
+}
+
+#submit {
+  font-size: 15px;
+  font-weight: bold;
+  background-image: linear-gradient(to right, #a0f3ed, #ff89bf);
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  width: 100%;
+  cursor: pointer;
+}
+
+#submit:hover {
+  background-image: linear-gradient(to right, #ff89bf, #a0f3ed);
+}
+
+.inputSpace {
+margin-left: 3em;
+}
+
+
+.inputBox {
+  position: relative;
+}
+
+.inputUser {
+  border: none;
+  border-bottom: 1px solid #ff89bf;
+  outline: none;
+  width: 100%;
+  letter-spacing: 1px;
+}
+
+.inputLabel {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.inputUser:focus~.inputLabel, .inputUser:valid~.inputLabel {
+  top: -14px;
+  font-size: 12px;
+  color: #ff469a;
+}
+
+.botoes {
+  display: flex;
+  align-items: center;
+}
+
+.botoes label {
+  cursor: pointer;
+}
+
+.radio {
+  cursor: pointer;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 0.3px solid #ff469a;
+  border-radius: 50%;
+  outline: none;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkbox {
+  cursor: pointer;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 0.3px solid #ff469a;
+  outline: none;
+  position: relative;
+  border-radius: 0;
+}
+
+.radio:before {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ff469a;
+  opacity: 0;
+}
+
+.checkbox::before {
+  content: '';
+  border-radius: 50%;
+  opacity: 0;
+  border-radius: 0;
+  background: none;
+  border: 2px solid #ff469a;
+  border-top: 0;
+  border-left: 0;
+  width: 4px;
+  height: 6px;
+  transform: rotate(45deg);
+  top: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1px;
+  margin-left: 4px;
+}
+
+.radio:checked::before, .checkbox:checked:before {
+  opacity: 1;
+}
+
+.radio:focus, .checkbox:focus {
+  box-shadow: 0 0 5px #ff469a;
+}
